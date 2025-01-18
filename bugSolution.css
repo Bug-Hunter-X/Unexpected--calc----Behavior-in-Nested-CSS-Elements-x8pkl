@@ -1,0 +1,22 @@
+/* bug.css */
+.container {
+  width: 300px;
+  padding: 10px;
+}
+
+.inner {
+  background-color: lightblue;
+  width: calc(100% - 20px); /* Incorrect calculation */
+}
+
+/* bugSolution.css */
+.container {
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box; /* Solution: Include padding in element size calculation */
+}
+
+.inner {
+  background-color: lightblue;
+  width: calc(100% - 20px); /* Now Correct */
+}
